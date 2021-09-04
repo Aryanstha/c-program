@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+    FILE *f;
+    char nm[10][30],add[10][35],ph[10][15];
+    int emp_no[10],i,j;
+    for(i=0;i<10;i++)
+    {
+        printf("Input Emp_no.:");
+        scanf("%d",&emp_no[i]);
+        printf("emp_no:%d\n",emp_no[i]);
+        getchar();
+        printf("Input Name:");
+        scanf("%s",&nm[i]);
+        printf("\nname:%s\n",nm[i]);
+        printf("Input Address:");
+        scanf("%s",&add[i]);
+        printf("\naddress:%s\n",add[i]);
+        printf("Input Phone:");
+        scanf("%s",&ph[i]);
+        printf("\nphone:%s\n",ph[i]);
+    }
+    for(j=0;j<10;j++)
+    {
+        f=fopen("ABC.TXT","a");
+        fprintf(f,"Emp_no:%d\nName:%s\nAddress:%s\nPhone:%s\n",emp_no[j],nm[j],add[j],ph[j]);
+        fclose(f);
+    }
+}
