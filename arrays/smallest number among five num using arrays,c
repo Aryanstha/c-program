@@ -1,0 +1,21 @@
+#include<stdio.h>
+        int main(){
+
+        int i,num[5],least;
+             for(i=0;i<5;i++)
+               {
+                  printf("Input numbers:");
+                  scanf("%d",&num[i]);
+
+                }
+                   least=num[0];
+                      for(i=0;i<5;i++)
+                       {
+                          if(num[i]<least)
+                       {
+                         least=num[i];
+                         }
+                         }
+              printf("\nSmallest number among 5 number:%d",least);
+return 0;
+}
